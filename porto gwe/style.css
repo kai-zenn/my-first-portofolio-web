@@ -1,0 +1,379 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #f4f1ea;
+}
+
+/* Header */
+.nav-header {
+    background-color: #2d4739;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.logo::before {
+    content: '♦';
+    color: #ff6b6b;
+    margin-right: 10px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-btn {
+    background-color: #ffa62b;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    color: #2d4739;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero */
+.hero {
+    background-color: #2d4739;
+    min-height: 100vh;
+    padding: 8rem 5% 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.hero-text {
+    color: #fff;
+}
+
+.portfolio-title {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #e2dfd7;
+    margin-bottom: 1rem;
+}
+
+.social-links a{
+    color: #ffd700;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem;
+    margin: 3rem 0 3rem 0;
+}
+
+.social-links a:hover {
+    background-color: #ffd700;
+    color: #ff8c00;
+}
+
+.profile-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* About */
+.about {
+    padding: 5rem 5%;
+    background-color: #f4f1ea;
+}
+
+.hello-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.hello-title {
+    font-size: 3.5rem;
+    color: #2d4739;
+    font-weight: bold;
+}
+
+.contact-card {
+    background-color: #2d4739;
+    color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+/* Education */
+.education {
+    margin-top: 4rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #2d4739;
+    margin-bottom: 2rem;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.year {
+    color: #ff6b6b;
+    font-weight: bold;
+}
+
+/* Experience */
+.experience {
+    background-color: #ffa62b;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-top: 4rem;
+}
+
+.skill-tags {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.tag {
+    background-color: #2d4739;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* Skills */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.skill-category {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+/* Hobbies */
+.hobbies {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.hobby-item {
+    text-align: center;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.hobby-icon {
+    font-size: 2rem;
+    color: #ffa62b;
+    margin-bottom: 1rem;
+}
+
+
+@media (max-width: 768px) {
+    .hero, .hello-section {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-title {
+        font-size: 3rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.nav-links a {
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #ffa62b;
+    transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.contact-btn {
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.contact-btn:hover {
+    transform: translateY(-3px);
+    background-color: #ff8c00;
+}
+
+.menu-btn {
+    display: none;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 100;
+}
+
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 100%;
+        background-color: #2d4739;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.3s ease;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .hero {
+        padding-top: 6rem;
+    }
+
+    .portfolio-title {
+        font-size: 2.5rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hello-section {
+        padding: 2rem 1rem;
+    }
+}
+
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s, transform 0.6s;
+}
+
+.scroll-animate.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skill-category, .hobby-item {
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.skill-category:hover, .hobby-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.skill-bar {
+    height: 10px;
+    background-color: #eee;
+    border-radius: 5px;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background-color: #ffa62b;
+    width: 0;
+    transition: width 1s;
+}
+
+.theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #2d4739;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.theme-toggle:hover {
+    transform: rotate(180deg);
+}
+
+[data-theme="dark"] {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+[data-theme="dark"] .about {
+    background-color: #2a2a2a;
+}
+
+[data-theme="dark"] .skill-category,
+[data-theme="dark"] .hobby-item {
+    background-color: #333;
+    color: #fff;
+}
